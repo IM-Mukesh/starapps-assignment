@@ -1,6 +1,9 @@
+// getting elements from HTML file
 var fileInput = document.getElementById("logoUpload");
 var buttonName = document.getElementById("button-name");
 var crossIcon = document.getElementById("cross-icon");
+
+// function to change the color of the umbrella
 function changeColor(color) {
   const umbrellaImage = document.getElementById("umbrellaImage");
   const container = document.getElementById("container");
@@ -25,23 +28,25 @@ function changeColor(color) {
   }
 }
 
+// logic to upload the logo
 function uploadLogo() {
   const logoUpload = document.getElementById("logoUpload");
   const file = logoUpload.files[0];
   console.log(file);
 
+  // if the size is more than 5MB then displaying alert message
   if (
     file &&
     (file.type === "image/png" || file.type === "image/jpeg") &&
     file.size <= 5 * 1024 * 1024
   ) {
     const reader = new FileReader();
+
+    // here reading file name to display the name of the logo in button.
     const fileName = file?.name;
-    console.log("file name is", fileName);
     crossIcon.style.opacity = 1;
     buttonName.innerText = fileName;
     reader.onload = function (e) {
-      console.log("image", e.target.result);
       const logoPlaceholder = document.getElementById("logoPlaceholder");
       logoPlaceholder.style.backgroundImage = `url(${e.target.result})`;
       logoPlaceholder.style.backgroundSize = "contain";
