@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6f2f2;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 10vw;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.umbrella-preview {
+  position: relative;
+  flex: 1;
+}
+
+.umbrella-preview img {
+  width: 100%;
+  height: auto;
+}
+
+.logo-placeholder {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  border: none;
+  outline: none;
+}
+#logoPlaceholder {
+  width: auto;
+  height: auto;
+  display: inline-block;
+}
+.outer-icon {
+  position: relative;
+  background-color: pink;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+}
+
+.controls {
+  text-align: left;
+  flex: 1;
+  padding: 0 50px 0 10vw;
+}
+.controls h1 {
+  font-size: 3.6rem;
+  margin-bottom: 3rem;
+}
+
+.color-options {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.color-option {
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.upload-section {
+  position: relative;
+}
+.upload-section .instant-preview {
+  font-size: 1.25rem;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+.upload-section h2 {
+  margin: 0 2px;
+}
+.upload-section p {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+.upload-section img {
+  color: #fff;
+}
+.upload-section .instruction {
+  opacity: 0.7;
+  margin-bottom: 14px;
+  font-size: 1rem;
+}
+
+.upload-button {
+  display: flex;
+  background-color: #45aad8;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 12px;
+  height: 40px;
+  max-width: 500px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.upload-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.upload-button input[type="file"] {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background-color: green;
+}
+.cross-icon {
+  opacity: 0;
+}
